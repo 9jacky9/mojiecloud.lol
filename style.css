@@ -1,0 +1,181 @@
+/* Archetype 8: Celestial Dual-Orbit Enclosure (mojiecloud.lol) */
+:root {
+  --primary: #a855f7;
+  --secondary: #c084fc;
+  --accent: #e9d5ff;
+  --bg: #090611;
+  --panel: #130d22;
+  --border: #2c1b4d;
+  --text: #faf5ff;
+  --muted: #9e8cb8;
+  --link-color: #e9d5ff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+a { color: var(--link-color); text-decoration: none; }
+a:visited { color: var(--link-color); }
+a:hover { color: var(--primary); text-decoration: underline; }
+
+/* Floating Astral Dock Nav */
+.astral-nav-wrap { padding: 20px 0; border-bottom: 1px solid var(--border); background: rgba(9, 6, 17, 0.95); position: sticky; top: 0; z-index: 99; }
+.astral-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.astral-nav-inner { display: flex; justify-content: space-between; align-items: center; }
+.astral-logo { font-size: 22px; font-weight: 900; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.astral-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+.astral-menu { list-style: none; display: flex; gap: 24px; }
+.astral-menu a { font-size: 14px; font-weight: 600; color: var(--muted); }
+.astral-menu a:hover { color: var(--accent); }
+.btn-astral-cta { background: linear-gradient(135deg, var(--primary), #6b21a8); color: #fff !important; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 13px; text-decoration: none !important; }
+
+/* Orbital Enclosure Hero */
+.orbit-hero { padding: 80px 0 60px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+.orbit-hero-h1 { font-size: 48px; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
+.orbit-hero-h1 span { color: var(--secondary); }
+.orbit-hero-desc { font-size: 18px; color: var(--muted); margin-bottom: 32px; }
+
+/* Quadrant Matrix 2x2 */
+.quadrant-section { padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.quadrant-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1000px; margin: 0 auto; }
+.quadrant-card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+.quadrant-card h3 { font-size: 20px; margin-bottom: 10px; color: var(--accent); }
+.quadrant-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* Badge Circles Pricing */
+.badge-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 60px 0; }
+.badge-price-card { background: var(--panel); border: 1px solid var(--border); border-radius: 24px; padding: 36px 28px; text-align: center; }
+.badge-price-card.featured { border-color: var(--primary); background: linear-gradient(180deg, var(--panel), rgba(168, 85, 247, 0.1)); }
+.badge-num { font-size: 38px; font-weight: 900; margin: 16px 0; }
+
+/* Curved Cosmic Footer */
+.astral-footer { padding: 60px 0 30px; border-top: 1px solid var(--border); margin-top: 80px; }
+.astral-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.astral-footer-col h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 16px; }
+.astral-footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+
+@media (max-width: 900px) {
+  .orbit-hero { grid-template-columns: 1fr; text-align: center; }
+  .quadrant-grid { grid-template-columns: 1fr; }
+  .badge-pricing { grid-template-columns: 1fr; }
+  .astral-footer-grid { grid-template-columns: 1fr; }
+  .astral-menu { display: none; }
+}
+
+
+/* ==========================================================================
+   Hero SVG Motion Core & Animation Keyframes (Guaranteed Visibility)
+   ========================================================================== */
+.motion-art-frame {
+  width: 100% !important;
+  max-width: 480px !important;
+  min-height: 280px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+}
+
+.motion-svg {
+  width: 100% !important;
+  max-width: 480px !important;
+  height: auto !important;
+  min-height: 260px !important;
+  display: block !important;
+  overflow: visible !important;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.65)) !important;
+}
+
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes creamBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes berryFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(4deg); }
+}
+
+@keyframes strawShake {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-2.5deg); }
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0); opacity: 0.25; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-24px); opacity: 0; }
+}
+
+@keyframes ringFloat {
+  0%, 100% { transform: translateY(0) rotate(-12deg); }
+  50% { transform: translateY(-10px) rotate(-8deg); }
+}
+
+@keyframes runeShimmer {
+  0%, 100% { opacity: 0.35; stroke-dashoffset: 0; }
+  50% { opacity: 1; stroke-dashoffset: 24; }
+}
+
+@keyframes spinCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes stepPulse {
+  0%, 100% { opacity: 0.7; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-4px); }
+}
+
+@keyframes cloudDrift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(16px); }
+}
+
+@keyframes rayAscend {
+  0% { stroke-dashoffset: 20; opacity: 0.2; }
+  50% { opacity: 0.95; }
+  100% { stroke-dashoffset: 0; opacity: 0.2; }
+}
+
+.glow-pulse { animation: glowPulse 4s ease-in-out infinite; transform-origin: center; }
+.cream-bounce { animation: creamBounce 3.5s ease-in-out infinite; }
+.berry-float { animation: berryFloat 3s ease-in-out infinite; transform-origin: 230px 85px; }
+.straw-shake { animation: strawShake 4s ease-in-out infinite; transform-origin: 210px 250px; }
+.bubble-float-1 { animation: bubbleFloat 3s ease-in-out infinite; }
+.bubble-float-2 { animation: bubbleFloat 4.2s ease-in-out infinite 0.8s; }
+.bubble-float-3 { animation: bubbleFloat 3.6s ease-in-out infinite 1.5s; }
+
+.ring-float { animation: ringFloat 5s ease-in-out infinite; }
+.rune-shimmer { animation: runeShimmer 3s ease-in-out infinite; }
+.orbital-spin { animation: spinCW 25s linear infinite; transform-origin: 230px 180px; }
+.ring-spin-cw { animation: spinCW 18s linear infinite; transform-origin: 230px 180px; }
+.ring-spin-ccw { animation: spinCCW 24s linear infinite; transform-origin: 230px 180px; }
+
+.step-pulse-1 { animation: stepPulse 3s ease-in-out infinite 0s; }
+.step-pulse-2 { animation: stepPulse 3s ease-in-out infinite 0.7s; }
+.step-pulse-3 { animation: stepPulse 3s ease-in-out infinite 1.4s; }
+.step-pulse-4 { animation: stepPulse 3s ease-in-out infinite 2.1s; }
+.cloud-drift-1 { animation: cloudDrift 6s ease-in-out infinite; }
+.cloud-drift-2 { animation: cloudDrift 7s ease-in-out infinite 1s; }
+.ray-ascend { animation: rayAscend 2.5s linear infinite; }
+.crystal-spin { animation: spinCW 12s linear infinite; transform-origin: center; }
+.mint-leaf-float { animation: berryFloat 4s ease-in-out infinite; transform-origin: 230px 95px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
